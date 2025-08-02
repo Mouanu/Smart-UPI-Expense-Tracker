@@ -1,10 +1,10 @@
 // src/components/FileUpload.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import TablePreview from "./TablePreview";
 import { mapCategories } from "../utils/mapCategories";
 
-const FileUpload = () => {
+const FileUpload = ({ setRows }) => {
   const [parsedData, setParsedData] = useState([]);
   const [headers, setHeaders] = useState([]);
 
@@ -17,12 +17,34 @@ const FileUpload = () => {
       skipEmptyLines: true,
       complete: (results) => {
         const rawData = results.data;
-        const categorizedData = mapCategories(rawData); // 🎯 Add this line
-        setParsedData(categorizedData); // ✅ Set updated data
-        setHeaders(Object.keys(categorizedData[0])); // ✅ Update headers with new keys
+        const categorizedData = mapCategories(rawData);
+        setParsedData(categorizedData);
+        setHeaders(Object.keys(categorizedData[0]));
+
+          setRows(categorizedData);
+
+        // 🧠 Save to localStorage
+        localStorage.setItem("csvData", JSON.stringify(categorizedData));
         console.log("Parsed & Categorized Data:", categorizedData);
       },
     });
+  };
+
+  // 🔁 On mount, check for saved data
+  useEffect(() => {
+    const saved = localStorage.getItem("csvData");
+    if (saved) {
+      const data = JSON.parse(saved);
+      setParsedData(data);
+      setHeaders(Object.keys(data[0]));
+    }
+  }, []);
+
+  // ❌ Optional: Clear saved CSV
+  const handleClear = () => {
+    localStorage.removeItem("csvData");
+    setParsedData([]);
+    setHeaders([]);
   };
 
   return (
@@ -33,8 +55,17 @@ const FileUpload = () => {
         onChange={handleFileChange}
         className="mb-4"
       />
+
       {parsedData.length > 0 && (
-        <TablePreview headers={headers} rows={parsedData} />
+        <>
+          <TablePreview headers={headers} rows={parsedData} />
+          <button
+            onClick={handleClear}
+            className="mt-4 bg-red-500 text-white px-3 py-1 rounded"
+          >
+            Clear CSV
+          </button>
+        </>
       )}
     </div>
   );
