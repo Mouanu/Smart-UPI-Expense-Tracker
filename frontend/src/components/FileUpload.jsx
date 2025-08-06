@@ -16,7 +16,12 @@ const FileUpload = ({ setRows }) => {
       header: true,
       skipEmptyLines: true,
       complete: (results) => {
-        const rawData = results.data;
+        const rawData = results.data.map((row) => ({
+      date: row["Date"],
+      person: row["To/From"],
+      amount: parseFloat(row["Amount"]),
+      ...row, // optional, if you want to keep the original keys too
+    }));
         const categorizedData = mapCategories(rawData);
         setParsedData(categorizedData);
         setHeaders(Object.keys(categorizedData[0]));
