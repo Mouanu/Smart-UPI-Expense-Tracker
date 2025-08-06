@@ -1,0 +1,17 @@
+Date,Time,Type,To/From,Amount,Message
+2025-07-20,9:00 AM,Debit,Amazon,799,Shopping
+2025-07-20,1:30 PM,Credit,Ritika Roy,2000,UPI Refund
+2025-07-21,8:00 PM,Debit,Swiggy,250,Food
+2025-07-21,11:00 AM,Debit,Electricity Board,1450,Bill
+2025-07-22,3:45 PM,Credit,Office Reimburse,3000,Travel
+2025-07-22,5:00 PM,Debit,Zomato,400,Lunch
+2025-07-23,9:30 AM,Debit,Netflix,500,Entertainment
+2025-07-23,10:30 AM,Debit,Amazon,1200,Electronics
+2025-07-24,4:00 PM,Debit,Swiggy,185,Snacks
+2025-07-24,7:15 PM,Credit,Mom,2000,Family Help
+2025-07-25,6:00 PM,Debit,Rahul Bose,300,Split Bill
+2025-07-26,10:00 AM,Debit,Amit Sharma,700,Friend Transfer
+2025-07-26,8:45 PM,Debit,Spotify,199,Entertainment
+2025-07-27,12:00 PM,Debit,Flipkart,999,Shopping
+2025-07-27,3:00 PM,Credit,Freelance Work,4500,Payment
+2025-07-28,1:30 PM,Debit,Ritika Roy,500,UPI Refund

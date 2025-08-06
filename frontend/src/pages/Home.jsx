@@ -1,7 +1,7 @@
 // Home.jsx
 import React, { useState } from "react";
 import FileUpload from "../components/FileUpload";
-import SummarySection from "../components/SummarySection.jsx"; // ✅ import
+import SummarySection from "../components/SummarySection/PersonWiseSummarySection.jsx"; // ✅ import
 
 const Home = () => {
   const [rows, setRows] = useState([]); // ⬅️ shared state

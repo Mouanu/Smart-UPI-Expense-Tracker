@@ -1,3 +1,4 @@
+
 const categorizeTransaction = (row) => {
   const toFrom = (row["To/From"] || "").toLowerCase();
   const message = (row["Message"] || "").toLowerCase();
@@ -8,7 +9,7 @@ const categorizeTransaction = (row) => {
 
   const keywords = {
     "Food & Dining": ["swiggy", "zomato", "domino", "food", "snack"],
-    "Transport": ["uber", "ola", "train", "metro", "travel", "cab"],
+    "Transport": ["uber", "ola", "train", "metro", "travel", "cab","bus"],
     "Shopping": ["amazon", "flipkart", "myntra", "store", "shopping"],
     "Entertainment": ["netflix", "hotstar", "bookmyshow", "movie", "game"],
     "Recharge & Bills": ["electricity", "water", "gas", "recharge", "jio", "airtel", "bill"],
