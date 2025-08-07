@@ -5,6 +5,7 @@ import GlobalSummary from "./GlobalSummary.jsx";
 import PersonWiseSummarySection from "./PersonWiseSummarySection";
 import DateFilter from "./DateFilter";
 import PersonFilter from "./PersonFilter";
+import CategorySummary from "../CategorySummary.jsx";
 
 function SummarySection({ rows }) {
   const [selectedDateRange, setSelectedDateRange] = useState({ from: "", to: "" });
@@ -50,6 +51,12 @@ function SummarySection({ rows }) {
       {/* Now just pass filtered rows to summary components */}
       <GlobalSummary rows={filteredRows} />
       <PersonWiseSummarySection rows={rows} />
+
+      {/*Category wise summary */}
+      {filteredRows.length > 0 && (
+  <CategorySummary transactions={filteredRows} />
+)}
+
     </div>
   );
 }

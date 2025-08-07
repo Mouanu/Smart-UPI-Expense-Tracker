@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import FileUpload from "../components/FileUpload";
 import SummarySection from "../components/SummarySection/SummarySection.jsx"; // ✅ import
-import GlobalSummary from "../components/SummarySection/GlobalSummary.jsx";
+
 
 const Home = () => {
   const [rows, setRows] = useState([]); // ⬅️ shared state
@@ -18,6 +18,7 @@ const Home = () => {
 
       {/* Show summary only after CSV is parsed */}
       {rows.length > 0 && <SummarySection rows={rows} />}
+
     </div>
   );
 };
