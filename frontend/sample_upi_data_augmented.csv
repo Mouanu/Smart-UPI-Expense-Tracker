@@ -1,4 +1,10 @@
 Date,Time,Type,To/From,Amount,Message
+2025-06-15,10:00 AM,Debit,Amazon,699,Shopping
+2025-06-16,6:30 PM,Credit,Freelance Client,3000,Design Work
+2025-06-17,8:45 PM,Debit,Zomato,299,Dinner
+2025-06-18,9:00 AM,Debit,Uber,150,Travel
+2025-06-19,5:00 PM,Debit,Swiggy,230,Lunch
+
 2025-07-20,9:00 AM,Debit,Amazon,799,Shopping
 2025-07-20,1:30 PM,Credit,Ritika Roy,2000,UPI Refund
 2025-07-21,8:00 PM,Debit,Swiggy,250,Food
@@ -15,6 +21,7 @@ Date,Time,Type,To/From,Amount,Message
 2025-07-27,12:00 PM,Debit,Flipkart,999,Shopping
 2025-07-27,3:00 PM,Credit,Freelance Work,4500,Payment
 2025-07-28,1:30 PM,Debit,Ritika Roy,500,UPI Refund
+
 2025-08-01,10:00 AM,Debit,Amazon,849,Groceries
 2025-08-01,8:00 PM,Debit,Zomato,310,Dinner
 2025-08-02,9:45 AM,Credit,Freelancer Payment,2000,Work
@@ -29,3 +36,9 @@ Date,Time,Type,To/From,Amount,Message
 2025-08-06,7:45 PM,Debit,KFC,550,Dinner
 2025-08-07,2:00 PM,Credit,College,2500,Stipend
 2025-08-07,5:00 PM,Debit,Flipkart,1800,Electronics
+
+2025-09-01,10:00 AM,Debit,Big Bazaar,1200,Groceries
+2025-09-02,4:15 PM,Credit,Freelance Project,4000,Web Dev
+2025-09-03,6:30 PM,Debit,Swiggy,220,Dinner
+2025-09-04,9:00 AM,Debit,OLA,180,Travel
+2025-09-05,7:00 PM,Debit,Netflix,199,Entertainment
