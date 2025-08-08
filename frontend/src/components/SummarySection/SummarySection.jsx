@@ -7,6 +7,7 @@ import DateFilter from "./DateFilter";
 import PersonFilter from "./PersonFilter";
 import CategorySummary from "../CategorySummary.jsx";
 import MonthlyTrends from "../MonthlyTrends.jsx";
+import MonthlySummaryTable from '../MonthlySummaryTable.jsx';
 
 function SummarySection({ rows }) {
   const [selectedDateRange, setSelectedDateRange] = useState({ from: "", to: "" });
@@ -60,8 +61,10 @@ function SummarySection({ rows }) {
 )}
     <br/>
      {filteredRows.length > 0 && (
+      <>
       <MonthlyTrends transactions={filteredRows} />
-  
+      <MonthlySummaryTable transactions={filteredRows} />
+      </>
 )}
 
     </div>
