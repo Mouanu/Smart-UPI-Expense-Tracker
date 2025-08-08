@@ -6,7 +6,7 @@ import PersonWiseSummarySection from "./PersonWiseSummarySection";
 import DateFilter from "./DateFilter";
 import PersonFilter from "./PersonFilter";
 import CategorySummary from "../CategorySummary.jsx";
-import MonthlyTrendline from "../MonthlyTrendline.jsx";
+import MonthlyTrends from "../MonthlyTrends.jsx";
 
 function SummarySection({ rows }) {
   const [selectedDateRange, setSelectedDateRange] = useState({ from: "", to: "" });
@@ -60,7 +60,7 @@ function SummarySection({ rows }) {
 )}
     <br/>
      {filteredRows.length > 0 && (
-  <MonthlyTrendline  transactions={filteredRows}/>
+      <MonthlyTrends transactions={filteredRows} />
   
 )}
 
