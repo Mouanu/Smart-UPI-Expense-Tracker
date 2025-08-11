@@ -1,4 +1,4 @@
-// Home.jsx
+// src>pages>Home.jsx
 import React, { useState } from "react";
 import FileUpload from "../components/FileUpload";
 import SummarySection from "../components/SummarySection/SummarySection.jsx"; // ✅ import
